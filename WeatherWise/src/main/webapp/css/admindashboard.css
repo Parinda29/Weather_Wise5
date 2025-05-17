@@ -1,0 +1,116 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1e293b;
+    color: white;
+    padding: 25px 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 30px;
+    font-size: 16px;
+    border-left: 4px solid transparent;
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li a:hover {
+    background-color: #334155;
+    border-left: 4px solid #38bdf8;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 50px;
+    width: 100%;
+    background-color: #f8fafc;
+}
+
+.header {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+.header p {
+    font-size: 16px;
+    color: #64748b;
+    margin-top: 8px;
+}
+
+/* Weather Summary Box */
+.weather-summary {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    max-width: 700px;
+}
+
+.weather-summary h3 {
+    font-size: 26px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.weather-summary p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #475569;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.details span {
+    flex: 1 1 200px;
+    background-color: #e0f2fe;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: #0c4a6e;
+    font-weight: 500;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+}

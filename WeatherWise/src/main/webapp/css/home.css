@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #e0f7ff, #a0d8ef);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px; /* Increased padding */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for separation */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Increased gap between links */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 16px; /* Slightly larger font for clarity */
+}
+
+/* Add more space in main content */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 80px; /* Increased padding for top/bottom & sides */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Space from navbar */
+}
+
+.left-box h1 {
+    font-size: 54px; /* Slightly larger title */
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+
+.left-box .highlight {
+    color: #007acc;
+}
+
+.left-box p {
+    margin-top: 20px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.read-more {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.right-box {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.weather-visual {
+    position: relative;
+}
+
+.weather-icon {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rain-icon {
+    width: 100px;
+    margin-top: 90px;
+}
+
+.temperature {
+    font-size: 48px;
+    color: #003366;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.person-icon {
+    width: 180px;
+}

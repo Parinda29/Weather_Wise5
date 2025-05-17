@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #f5c5e2, #b393e6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 360px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.top-box {
+    background: linear-gradient(to right, #c48cd6, #8f6ac6);
+    color: white;
+    text-align: center;
+    padding: 30px 20px 20px;
+    position: relative;
+}
+
+.signup-text {
+    margin: 0;
+    font-size: 16px;
+}
+
+.signup-btn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: white;
+    color: #8f6ac6;
+    font-weight: bold;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+    background: #f1e6ff;
+}
+
+.login-form-box {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.login-form-box h2 {
+    margin-bottom: 25px;
+    color: #8f6ac6;
+    font-size: 24px;
+}
+
+.login-form .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 10px 15px;
+    background-color: #f4edf9;
+}
+
+.login-form .input-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form .icon {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #8f6ac6;
+}
+
+.login-btn {
+    width: 100%;
+    background: #8f6ac6;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #734db0;
+}
+
+.forgot-link {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.forgot-link a {
+    color: #8f6ac6;
+    text-decoration: none;
+}

@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right top, #fbc2eb, #a6c1ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.register-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: #fff;
+    width: 600px;
+}
+
+.register-container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Grid Form Layout */
+.register-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.register-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs and Selects */
+.register-form label {
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    text-align: left;
+}
+
+.register-form input,
+.register-form select {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+}
+
+/* File input styling */
+.register-form input[type="file"] {
+    cursor: pointer;
+}
+
+/* Full-width elements (file input, button, messages) */
+.register-form .full-width {
+    grid-column: span 2;
+}
+
+.register-form button {
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.register-form button:hover {
+    background-color: #e2e2e2;
+}
+
+/* Error and Success Messages */
+.error, .success {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff4c4c;
+    border: 1px solid #ff4c4c;
+}
+
+.success {
+    background-color: rgba(0, 255, 100, 0.1);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .register-container {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .register-form {
+        grid-template-columns: 1fr;
+    }
+
+    .register-form .full-width {
+        grid-column: span 1;
+    }
+}
