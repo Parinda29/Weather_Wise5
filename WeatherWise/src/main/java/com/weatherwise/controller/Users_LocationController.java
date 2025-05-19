@@ -11,6 +11,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Parinda Rai
+ */
 @WebServlet("/userlocation")
 public class Users_LocationController extends HttpServlet {
     private static final long serialVersionUID = 1L;

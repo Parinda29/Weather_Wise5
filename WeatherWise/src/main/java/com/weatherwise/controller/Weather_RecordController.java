@@ -12,6 +12,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Parinda Rai
+ */
 @WebServlet("/weather_record")
 public class Weather_RecordController extends HttpServlet {
     private static final long serialVersionUID = 1L;

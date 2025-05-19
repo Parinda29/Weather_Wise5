@@ -1,12 +1,11 @@
-/* weather.css */
 
-/* General Reset */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fdf2f8; /* light pink background */
-    color: #333; /* dark text */
+    background: #fdf2f8; 
+    display: flex;
+    color: #333; 
 }
 
 /* Page Heading */

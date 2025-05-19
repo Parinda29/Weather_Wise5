@@ -1,1 +1,81 @@
-@charset "UTF-8";
+/* Background & body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a18cd1); /* Pink to purple gradient */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile card container */
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* Left: Profile image */
+.profile-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fbc2eb; /* Soft pink border */
+    background-color: #fef2f7;
+}
+
+/* Right: Profile details */
+.profile-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-details h2 {
+    font-size: 28px;
+    color: #6a1b9a; /* Purple text */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f3d5f7;
+    padding-bottom: 5px;
+}
+
+/* Individual field style */
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 1px solid #f3e5f5;
+}
+
+.profile-field:last-child {
+    border-bottom: none;
+}
+
+.profile-field label {
+    font-weight: bold;
+    color: #ad1457; /* Darker pink */
+    margin-bottom: 4px;
+}
+
+.profile-field span {
+    color: #333;
+    font-size: 16px;
+}

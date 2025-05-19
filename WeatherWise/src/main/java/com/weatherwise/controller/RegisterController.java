@@ -2,6 +2,7 @@ package com.weatherwise.controller;
 
 import java.io.IOException;
 
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -15,6 +16,10 @@ import com.weatherwise.service.RegisterService;
 import com.weatherwise.util.ImageUtil;
 import com.weatherwise.util.PasswordUtil;
 import com.weatherwise.util.RedirectionUtil;
+
+/**
+ * @author Parinda Rai
+ */
 
 @WebServlet(asyncSupported = true, urlPatterns = { "/register" })
 @MultipartConfig(
@@ -102,4 +107,5 @@ public class RegisterController extends HttpServlet {
     private void showSuccess(HttpServletRequest req, HttpServletResponse resp, String message, String redirectUrl) throws ServletException, IOException {
         redirectionUtil.setMsgAndRedirect(req, resp, "success", message, redirectUrl);
     }
+    
 }

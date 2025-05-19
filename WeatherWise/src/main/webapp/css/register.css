@@ -9,19 +9,21 @@ body {
 }
 
 .register-container {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(30, 30, 30, 0.7); /* Darker for better readability */
     padding: 2.5rem 3rem;
     border-radius: 20px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     width: 600px;
+    max-width: 95%;
 }
 
 .register-container h1 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    color: #fff;
 }
 
 /* Grid Form Layout */
@@ -37,15 +39,16 @@ body {
     flex-direction: column;
 }
 
-/* Inputs and Selects */
+/* Labels */
 .register-form label {
     margin-bottom: 0.3rem;
     font-weight: 600;
     font-size: 0.9rem;
-    color: #f0f0f0;
+    color: #eaeaea;
     text-align: left;
 }
 
+/* Inputs and Selects */
 .register-form input,
 .register-form select {
     padding: 0.6rem;
@@ -62,7 +65,7 @@ body {
     cursor: pointer;
 }
 
-/* Full-width elements (file input, button, messages) */
+/* Full-width elements */
 .register-form .full-width {
     grid-column: span 2;
 }

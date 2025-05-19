@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * @author Prithivi Maharjan
+ * @author Parinda Rai
  */
 @WebServlet(asyncSupported = true, urlPatterns = { "/login" })
 public class LoginController extends HttpServlet {
@@ -53,7 +53,7 @@ public class LoginController extends HttpServlet {
         if (!validationUtil.isNullOrEmpty(username) && !validationUtil.isNullOrEmpty(password)) {
 
             // ✅ Hardcoded admin logic first
-            if ("admin".equals(username) && "adminpassword".equals(password)) {
+            if ("parinda".equals(username) && "23056547".equals(password)) {
                 SessionUtil.setAttribute(req, "username", username);
                 CookiesUtil.addCookie(resp, "role", "admin", 5 * 30); // 5 * 30 minutes
                 System.out.println("Admin login successful!");
@@ -66,9 +66,10 @@ public class LoginController extends HttpServlet {
 
             if (loginStatus != null && loginStatus) {
                 SessionUtil.setAttribute(req, "username", username);
-
                 CookiesUtil.addCookie(resp, "role", "user", 5 * 30);
-                resp.sendRedirect(req.getContextPath() + "/userdashboard");
+
+                // ✅ FIXED: Forwarding to JSP inside /WEB-INF
+                req.getRequestDispatcher("/WEB-INF/Pages/userdashboard.jsp").forward(req, resp);
             } else {
                 handleLoginFailure(req, resp, loginStatus);
             }
@@ -80,14 +81,7 @@ public class LoginController extends HttpServlet {
     }
 
     /**
-     * Handles login failures by setting attributes and forwarding to the login
-     * page.
-     *
-     * @param req         HttpServletRequest object
-     * @param resp        HttpServletResponse object
-     * @param loginStatus Boolean indicating the login status
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * Handles login failures by setting attributes and forwarding to the login page.
      */
     private void handleLoginFailure(HttpServletRequest req, HttpServletResponse resp, Boolean loginStatus)
             throws ServletException, IOException {
@@ -95,7 +89,7 @@ public class LoginController extends HttpServlet {
         if (loginStatus == null) {
             errorMessage = "Our server is under maintenance. Please try again later!";
         } else {
-            errorMessage = "User credential mismatch. Please try again!";
+            errorMessage = "Invalid username or password. Please try again!";
         }
         req.setAttribute("error", errorMessage);
         req.getRequestDispatcher(RedirectionUtil.loginUrl).forward(req, resp);

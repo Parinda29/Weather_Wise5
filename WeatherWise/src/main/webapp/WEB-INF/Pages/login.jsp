@@ -13,7 +13,7 @@
             <p class="signup-text">Don't you have account?</p>
            <a href="${pageContext.request.contextPath}/register">Sign up</a>
         </div>
-        <p style="color: red; text-align: center;">${errorMessage}</p>
+        <p style="color: red; text-align: center;">${error}</p>
         <div class="login-form-box">
             <h2>WELCOME</h2>
             <form action="login" method="post" class="login-form">
